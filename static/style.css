@@ -1,0 +1,167 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.date {
+    display: flex;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: fixed; /* Fixed positioning */
+    width: 100%; /* Full width */
+    top: 0; /* At the top of the viewport */
+    right: 0;  
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Form styles */
+.form-row {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Room styles */
+.room {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.btn-delete {
+    color: #ff0000;
+    margin-left: 10px;
+}
+
+/* Centering styles */
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Login box styles */
+.login {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.login input {
+    width: 300px;
+    padding: 8px 20px;
+    margin-top: 10px;
+}
+
+.btns {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    background-color: green;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    width: 150px;
+    text-align: center;
+}
+
+.btn-delete {
+    background-color: #ff0000;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    gap: 10px;
+}
+
+.date {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

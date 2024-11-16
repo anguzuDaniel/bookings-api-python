@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+    <script type="module" src="{{ url_for('static', path='/firebase-login.js') }}"></script>
+</head>
+<body>
+    <h1>Bookings</h1>
+
+    {% if room %}
+        <h2>All bookings you have made for room[{{ room }}]</h2>
+    {% else %}
+        <h2>All bookings you have made.</h2>
+    {% endif %}
+
+    {% if user_bookings %}
+    <div class="bookings">
+        {% for booking in user_bookings %}
+            <div class="booking">
+                <div class="date">
+                    <h3>Start Time:</h3> <p>{{ booking.start_time }}</p>
+                </div>
+                <div class="date">
+                    <h3>End time:</h3> 
+                    <p>{{ booking.end_time }}</p>
+                </div>
+
+                <div class="btns">
+                    <a href="/delete/booking/{{ booking.id }}" class="btn-delete">Delete</a> 
+                    <a href="/edit/booking/{{ booking.id }}" class="btn-edit">Edit</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p>No bookings made for room.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+    <script type="module" src="{{ url_for('static', path='/firebase-login.js') }}"></script>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Firebase Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+        <script type="module" src="{{ url_for('static', path='/firebase-login.js') }}"></script>
+    </head>
+    <body>        
+        <h1>Edit Booking</h1>
+        
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <form action="/save-update/{{ booking.id }}" method="post">
+            <div>
+                <label>Date:</label>
+                <input type="date" name="date" value="{{ booking.date }}" required>
+            </div>
+
+            <div>
+                <label for="start_time">Start Time:</label>
+                <input type="time" id="start_time" name="start_time" value="{{ booking.start_time }}">
+            </div>
+            
+            <div>
+                <label for="end_time">End Time:</label>
+                <input type="time" id="end_time" name="end_time" value="{{ booking.end_time }}">
+            </div>
+            
+            <button type="submit">Save Update</button>
+        </form>
+    </body>
+    </html>
+    
+</body>
+</html>
