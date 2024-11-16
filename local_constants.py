@@ -1,2 +1,1 @@
-PROJECT_NAME="example-415112"
-PROJECT_STORAGE_BUCKET="example-415112.appspot.com"
+
